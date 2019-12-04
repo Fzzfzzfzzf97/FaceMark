@@ -1,9 +1,29 @@
 <!--pages/faceMark/faceMark.wxml-->
-<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: {{windowHeight}}px;">
+<camera wx:if="{{!isShowPic}}" device-position="{{position}}" flash="off" binderror="error" style="width: 100%; height: {{windowHeight}}px;">
     <cover-view class="op-box">
-        <cover-image src="../../images/icon/reverse.png" class="op-item"></cover-image>
-        <cover-image src="../../images/icon/camera.png" class="op-item"></cover-image>
-        <cover-image src="../../images/icon/album.png" class="op-item"></cover-image>
+        <!-- 切换摄像头 -->
+        <cover-image src="../../images/icon/reverse.png" class="op-item" bindtap='reverseCamera'></cover-image>
+        <!-- 拍照 -->
+        <cover-image src="../../images/icon/camera.png" class="op-item" bindtap='takePhoto'></cover-image>
+        <!-- 相册 -->
+        <cover-image src="../../images/icon/album.png" class="op-item" bindtap='choosePhoto'></cover-image>
     </cover-view>
 </camera>
-
+<view wx:else>
+    <image src="{{src}}" style="width:100%;height:{{windowHeight}}px" mode="aspectFill"></image>
+    <view class='faceinfo_box' wx:if="{{isShowBox}}">
+        <view class='face_row'>
+            <text>年龄：{{faceInfo.age}}岁</text>
+            <text>性别：{{map.gender[faceInfo.gender.type]}}</text>
+        </view>
+        <view class='face_row'>
+            <text>颜值：{{faceInfo.beauty}}分</text>
+            <text>表情：{{map.expression[faceInfo.expression.type]}}</text>
+        </view>
+        <view class='face_row'>
+            <text>眼镜：{{map.glasses[faceInfo.glasses.type]}}</text>
+            <text>情绪：{{map.emotion[faceInfo.emotion.type]}}</text>
+        </view>
+    </view>
+    <button class='reChoose_btn' bindtap='reChoose'>重选照片</button>
+</view>

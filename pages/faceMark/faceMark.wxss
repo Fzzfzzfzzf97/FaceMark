@@ -6,8 +6,41 @@
     width: 100%;
     bottom: 38rpx;
     opacity: .78;
+    z-index: 1000;
 }
 .op-box .op-item {
     width: 80rpx;
     height: 80rpx;
+}
+.reChoose_btn {
+    position: fixed;
+    bottom: 38rpx;
+    height: 88rpx;
+    width: 320rpx;
+    line-height: 88rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #6ba89c;
+    color: snow;
+    border-radius: 88rpx;
+}
+.faceinfo_box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.face_row {
+  display: flex;
+  justify-content: space-around;
+  font-size: 13px;
 }
