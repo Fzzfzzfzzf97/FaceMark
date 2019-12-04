@@ -1,1 +1,13 @@
 /* pages/faceMark/faceMark.wxss */
+.op-box{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    bottom: 38rpx;
+    opacity: .78;
+}
+.op-box .op-item {
+    width: 80rpx;
+    height: 80rpx;
+}

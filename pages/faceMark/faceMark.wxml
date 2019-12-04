@@ -1,5 +1,9 @@
 <!--pages/faceMark/faceMark.wxml-->
-<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: {{windowHeight}}px;"></camera>
-<!-- <button type="primary" bindtap="takePhoto">拍照</button>
-<view>预览</view>
-<image mode="widthFix" src="{{src}}"></image> -->
+<camera device-position="back" flash="off" binderror="error" style="width: 100%; height: {{windowHeight}}px;">
+    <cover-view class="op-box">
+        <cover-image src="../../images/icon/reverse.png" class="op-item"></cover-image>
+        <cover-image src="../../images/icon/camera.png" class="op-item"></cover-image>
+        <cover-image src="../../images/icon/album.png" class="op-item"></cover-image>
+    </cover-view>
+</camera>
+
