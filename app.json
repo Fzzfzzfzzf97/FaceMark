@@ -1,0 +1,12 @@
+{
+    "pages": [
+        "pages/faceMark/faceMark"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#79b8ac",
+        "navigationBarTitleText": "Face Mark",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json"
+}
