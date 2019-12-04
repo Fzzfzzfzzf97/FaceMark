@@ -6,7 +6,8 @@
         "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#79b8ac",
         "navigationBarTitleText": "Face Mark",
-        "navigationBarTextStyle": "white"
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
     },
     "sitemapLocation": "sitemap.json"
 }
